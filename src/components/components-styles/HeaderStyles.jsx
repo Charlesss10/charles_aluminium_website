@@ -7,7 +7,7 @@ export const HeaderContainer = styled.div`
   font-family: ${fonts.mainFont};
   position: sticky;
   top: 0;
-  background: ${colors.white};
+  background: ${colors.lightGray};
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   box-sizing: border-box;
@@ -66,7 +66,7 @@ export const NavLink = styled.a`
   text-decoration: none;
   color: ${({ 
 // @ts-ignore
-  $isactive }) => ($isactive ? colors.black : colors.gray)};
+  $isactive }) => ($isactive ? colors.footerBlack : colors.gray)};
   font-size: 18px;
   font-weight: 500;
   position: relative;
@@ -126,11 +126,11 @@ export const DropdownMenu = styled.ul`
     margin-right: 0;
     
     &:hover{
-    background-color: ${colors.lightBlue};
+      background: linear-gradient(135deg, rgba(72, 209, 204, 0.3), rgba(255, 255, 255, 0.8));
     }
 
     &:hover::after {
-    width: 0;
+      width: 0;
     }
   }
 

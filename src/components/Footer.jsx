@@ -24,7 +24,7 @@ function Footer() {
                         </div>
 
                         <div className="reachOut">
-                            <p><FaPhone size={20} /> (+234) 91 6349 1771 </p>
+                            <p><FaPhone size={20} /> (+234) 80 8118 2659 </p>
                             <p><FaEnvelope size={20} /> <a href="mailto:charlesaluminium@yahoo.com"> charlesaluminium@yahoo.com</a></p>
                         </div>
 
@@ -64,7 +64,30 @@ function Footer() {
             </FooterContainer>
 
             <FooterSignature>
-                © 2024 Charles Aluminium Designed by <a href="https://www.linkedin.com/in/charles-eboson/" target="_blank" rel="noopener noreferrer">CharlesTech Solutions</a>.
+                © 2024 Charles Aluminium Designed by{" "}
+                <a
+                    href="https://www.linkedin.com/in/charles-eboson/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    CharlesTech Solutions
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        style={{ marginLeft: "6px", marginBottom: "4px", verticalAlign: "middle" }}
+                    >
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>
             </FooterSignature>
         </>
     );

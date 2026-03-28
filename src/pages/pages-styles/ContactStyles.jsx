@@ -4,28 +4,35 @@ import fonts from '../../helper-components/Font';
 import dimensions from '../../helper-components/Dimension';
 
 export const PageHeaderOuterContainer = styled.div`
-  background-color: ${colors.footerBlack};
-  margin-top: 0;
+  background: linear-gradient(135deg, rgba(72, 209, 204, 0.3), rgba(255, 255, 255, 0.8));
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: left;
-  margin-bottom: 10px;
   box-sizing: border-box;
 `;
 
 export const PageHeader = styled.h2`
-  color: ${colors.lightGray};
+  color: ${colors.darkGray};
   font-family: ${fonts.mainFont};
   font-size: 32px;
   max-width: ${dimensions.pageDimension};
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 20px;
+  margin: 0 auto;
+  display: table;
+  border-bottom: 2px solid ${colors.lightBlue};
+  padding: 10px 10px 5px 10px;
   box-sizing: border-box;
 
   @media (max-width: 768px) {
     font-size: 28px;
+    display: block; /* Forces the element (and border) to 100% width */
+    margin: 0;
+    width: 100%;
+    padding: 10px 20px 8px 20px; 
   }
+`;
+
+export const BackgroundContainer = styled.div`
+  background-color: ${colors.lightGray};
 `;
 
 export const ContactPageContainer = styled.div`
@@ -117,9 +124,36 @@ export const ContactFormContainer = styled.div`
     flex-wrap: wrap;
 
     button {
-    height: 40px;
-    width: 180px;
-    cursor: pointer;
+      display: inline-block;
+      padding: 8px 20px;
+      font-family: ${fonts.mainFont};
+      font-weight: bold;
+      color: ${colors.footerBlack};
+      background: linear-gradient(135deg, rgba(72, 209, 204, 0.3), rgba(255, 255, 255, 0.8));
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      animation-delay: 0.8s; /* Further delayed animation start */
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        background-color: ${colors.gray};
+      }
+
+      &:active {
+        transform: translateY(2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      @media (max-width: 768px) {
+        width: 100%;
+        padding: 7px 15px;
+        font-size: 14px;
+      }
     }
   }
 
@@ -136,14 +170,15 @@ export const ContactFormContainer = styled.div`
   .followUs{
     background-color: #f9f9f9;
     padding: 20px;
-    margin-bottom: 59px;
+    margin-top:-50px;
 
     h2 {
-    color: ${colors.darkGray};
+      color: ${colors.darkGray};
     }
 
     a {
-    margin-right: 20px;
+      margin-right: 20px;
+    }
   };
 
   @media (max-width: 768px) {

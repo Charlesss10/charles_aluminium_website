@@ -3,6 +3,10 @@ import colors from '../.././helper-components/Color'
 import fonts from '../../helper-components/Font';
 import dimensions from '../../helper-components/Dimension';
 
+export const BackgroundContainer = styled.div`
+  background-color: ${colors.lightGray};
+`;
+
 export const HomePageContainer = styled.div`
   font-family: ${fonts.mainFont};
   color: ${colors.darkGray};

@@ -114,7 +114,7 @@ export const SocialIcon = styled.a`
 
 export const SocialIconContainer = styled.div`
   display: flex;
-  gap: 30px;
+  gap: 20px;
   margin-top: 20px;
 
    @media (max-width: 768px) {
@@ -126,6 +126,7 @@ export const FooterSignature = styled.div`
   text-align: center;
   color: ${colors.gray};
   font-family: ${fonts.mainFont};
+  fontWeight: "bold";
   font-size: 14px;
   padding: 15px 0;
   background-color: rgba(0, 0, 0, 0.9);
@@ -143,6 +144,4 @@ export const FooterSignature = styled.div`
     font-size: 12px;
     padding: 10px 0;
   }
-
 `;
-
