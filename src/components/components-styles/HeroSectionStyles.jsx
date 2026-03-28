@@ -98,8 +98,9 @@ export const HeroProductsButton = styled.a`
   padding: 8px 20px;
   font-family: ${fonts.mainFont};
   font-size: 16px;
-  color: ${colors.black};
-  background-color: ${colors.lightBlue};
+  font-weight: bold;
+  color: ${colors.footerBlack};
+  background: linear-gradient(135deg, rgba(72, 209, 204, 0.3), rgba(255, 255, 255, 0.8));
   border: none;
   border-radius: 5px;
   text-decoration: none;
