@@ -150,6 +150,7 @@ export const ContactFormContainer = styled.div`
       }
 
       @media (max-width: 768px) {
+        display: block;
         width: 100%;
         padding: 7px 15px;
         font-size: 14px;
@@ -170,7 +171,7 @@ export const ContactFormContainer = styled.div`
   .followUs{
     background-color: #f9f9f9;
     padding: 20px;
-    margin-top:-50px;
+    margin-top: -50px;
 
     h2 {
       color: ${colors.darkGray};
@@ -178,6 +179,13 @@ export const ContactFormContainer = styled.div`
 
     a {
       margin-right: 20px;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 0;
+      margin-bottom: 20px;
     }
   };
 

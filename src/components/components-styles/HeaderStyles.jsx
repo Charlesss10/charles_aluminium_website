@@ -161,6 +161,7 @@ export const MobileNavMenu = styled.div`
   list-style: none;
   border-top: 5px solid ${colors.lightBlue};
   z-index: 1001; /* Ensure sidebar is above other content */
+  background: ${colors.lightGray};
 
   ${NavLink} {
     padding: 20px 15px;
