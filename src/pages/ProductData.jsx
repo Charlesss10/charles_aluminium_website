@@ -1,8 +1,12 @@
 import { useParams } from 'react-router-dom';
 import ProductInfoData from '../products/ProductInfoData';
+
+// Imports specific to Charles Roof Felt Membrane
 // @ts-ignore
 import feltVideo from '../assets/feltVideo.mp4';
 import feltVideoPoster from '../assets/feltVideoPoster.png';
+import feltPosterImage from '../assets/feltPoster.png';
+
 import {
   PageHeaderOuterContainer,
   PageHeader,
@@ -17,54 +21,90 @@ import {
   CTASection,
   CTASectionLink,
   OtherProductLink,
-  CharlesFeltVideo
+  CharlesFeltVideo,
+  FeltCustomLayout // New styled component for this specific layout
 } from './pages-styles/ProductDataStyles';
 
 const ProductData = () => {
   const { productName } = useParams();
-  const product = ProductInfoData.find((product) => product.name === productName); // Find the specific product
+  const product = ProductInfoData.find((p) => p.name === productName);
 
   if (!product) {
     return (
-      <><PageHeaderOuterContainer>
-        <a href={`/products`} style={{ textDecoration: 'none' }}>
-          <PageHeader>OUR PRODUCTS</PageHeader>
-        </a>
-      </PageHeaderOuterContainer><p>Product not found!</p></>
+      <>
+        <PageHeaderOuterContainer>
+          <a href="/products" style={{ textDecoration: 'none' }}>
+            <PageHeader>OUR PRODUCTS</PageHeader>
+          </a>
+        </PageHeaderOuterContainer>
+        <p>Product not found!</p>
+      </>
     );
   }
 
-  const otherProducts = ProductInfoData.filter((p) => p.name !== product.name); // Filter out the current product from the "Other Products" list
+  const otherProducts = ProductInfoData.filter((p) => p.name !== product.name);
+  const isFeltMembrane = product.name === 'Charles Roof Felt Membrane';
 
   return (
-    <><PageHeaderOuterContainer>
-      <PageHeader>{product.name}</PageHeader>
-    </PageHeaderOuterContainer>
+    <>
+      <PageHeaderOuterContainer>
+        <PageHeader>{product.name}</PageHeader>
+      </PageHeaderOuterContainer>
+
       <BackgroundContainer>
         <ProductPageContainer>
-          <ProductInfo>
-            <ProductDescription>
-              <h2>DESCRIPTION</h2>
-              <p>{product.description}</p>
-            </ProductDescription>
+          
+          {/* CUSTOM LAYOUT FOR FELT MEMBRANE */}
+          {isFeltMembrane ? (
+            <FeltCustomLayout>
+              {/* LEFT COLUMN */}
+              <div className="left-column">
+                <ProductDescription>
+                  <h2>DESCRIPTION</h2>
+                  <p>{product.description}</p>
+                </ProductDescription>
 
-            <ProductImageContainer>
-              <ProductImage src={product.Image} alt={product.name} />
-            </ProductImageContainer>
+                {/* Original Felt Image placed under description */}
+                <div className="original-image-wrapper">
+                  <ProductImage src={product.Image} alt={product.name} />
+                </div>
 
-            {product.name === 'Charles Roof Felt Membrane' && (
-              <CharlesFeltVideo>
-                <video controls width="100%" poster={feltVideoPoster}>
-                  <source src={feltVideo} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </CharlesFeltVideo>
-            )}
-          </ProductInfo>
+                {/* Video placed under the original image */}
+                <CharlesFeltVideo className="felt-video">
+                  <video controls width="100%" poster={feltVideoPoster}>
+                    <source src={feltVideo} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </CharlesFeltVideo>
+              </div>
 
+              {/* RIGHT COLUMN (Tall Poster) */}
+              <div className="right-column">
+                <img 
+                  src={feltPosterImage} 
+                  alt="Charles Felt Poster" 
+                  className="tall-poster"
+                />
+              </div>
+            </FeltCustomLayout>
+          ) : (
+            /* DEFAULT LAYOUT FOR ALL OTHER PRODUCTS */
+            <ProductInfo>
+              <ProductDescription>
+                <h2>DESCRIPTION</h2>
+                <p>{product.description}</p>
+              </ProductDescription>
+
+              <ProductImageContainer>
+                <ProductImage src={product.Image} alt={product.name} />
+              </ProductImageContainer>
+            </ProductInfo>
+          )}
+
+          {/* OTHER PRODUCTS SECTION */}
           <h2>OTHER PRODUCTS</h2>
           <OtherProductsGrid>
-            {otherProducts.map(otherProduct => (
+            {otherProducts.map((otherProduct) => (
               <OtherProductLink key={otherProduct.id} href={`/products/${otherProduct.name}`}>
                 <OtherProductsItem>
                   <img src={otherProduct.Image} alt={otherProduct.name} />
@@ -79,7 +119,7 @@ const ProductData = () => {
             <CTASectionLink href="/contact">Contact Us</CTASectionLink>
           </CTASection>
 
-        </ProductPageContainer >
+        </ProductPageContainer>
       </BackgroundContainer>
     </>
   );

@@ -117,6 +117,48 @@ export const CharlesFeltVideo = styled.div`
   margin-top: 20px;
   }
 `
+export const FeltCustomLayout = styled.div`
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  margin-bottom: 40px;
+
+  .left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .right-column {
+    flex: 1;
+    display: flex;
+  }
+
+  .tall-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 4px;
+  }
+
+  .original-image-wrapper {
+    width: 100%;
+  }
+
+  .felt-video {
+    width: 100%;
+  }
+
+  /* Responsive stacking for mobile screens */
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .right-column {
+      order: 2; /* Moves poster below on mobile if preferred */
+    }
+  }
+`;
 
 export const OtherProductsGrid = styled.div`
   display: grid;
