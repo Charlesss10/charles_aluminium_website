@@ -15,20 +15,35 @@ function Footer() {
             <FooterContainer>
                 <div className="inner-footer">
 
-                    <FooterBox className="head-office">
-                        <FooterTitle>Head Office</FooterTitle>
+                    <FooterBox className="contact-us">
+                        <FooterTitle>Contact Us</FooterTitle>
                         <div>
-                            <p>Km 18, Rumuokoro, Airport Road,</p>
-                            <p>Igwuruta, Port Harcourt,</p>
-                            <p>Rivers State, Nigeria</p>
+                            <p>Km 18, Rumuokoro, Airport Road, Igwuruta, PH</p>
                         </div>
 
-                        <div className="reachOut">
-                            <p><FaPhone size={20} /> (+234) 80 8118 2659 </p>
-                            <p><FaEnvelope size={20} /> <a href="mailto:charlesaluminium@yahoo.com"> charlesaluminium@yahoo.com</a></p>
+                        <div className="email-contact">
+                            <p>
+                                <FaEnvelope size={18} />
+                                <a href="mailto:cigbojionu12@yahoo.com">cigbojionu12@yahoo.com</a>
+                            </p>
                         </div>
 
-                        <div>
+                        <div className="mobile-contact">
+                            <p>
+                                <FaPhone size={18} />
+                                <strong>HQ (PH):</strong> <a href="tel:+2347039905105">(+234) 70 3990 5105</a>
+                            </p>
+                            <p>
+                                <FaPhone size={18} />
+                                <strong>Orlu:</strong> <a href="tel:+2349067988466">(+234) 90 6798 8466</a>
+                            </p>
+                            <p>
+                                <FaPhone size={18} />
+                                <strong>Uyo:</strong> <a href="tel:+2348081182659">(+234) 80 8118 2659</a>
+                            </p>
+                        </div>
+
+                        <div className="hours">
                             <p>Mon - Fri: 8:00AM - 5:00PM</p>
                             <p>Sat: 8:00AM - 2:00PM</p>
                         </div>

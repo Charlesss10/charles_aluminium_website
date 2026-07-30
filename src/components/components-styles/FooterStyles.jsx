@@ -40,7 +40,7 @@ export const FooterBox = styled.div`
   color: ${colors.gray};
   padding: 20px;
 
-  &.head-office {
+  &.contact-us {
     display: flex;
     flex-direction: column;
     font-family: ${fonts.mainFont};
@@ -67,7 +67,7 @@ export const FooterBox = styled.div`
     }
   }
 
-  .reachOut{
+  .email-contact{
     h2 {
     color: ${colors.darkGray};
     }
@@ -80,12 +80,37 @@ export const FooterBox = styled.div`
         a {
          color: ${colors.gray};
          text-decoration: none;
+         transition: color 0.2s ease;
 
           &:hover {
           color: ${colors.white};
           }
         }
       }
+  }
+
+  .mobile-contact {
+    h2 {
+      color: ${colors.darkGray};
+    }
+  
+    p {
+      display: flex;
+      align-items: center; /* Keeps icon vertically aligned with phone numbers */
+      margin: 8px 0;
+      gap: 10px;
+      color: ${colors.gray};
+
+      a {
+        color: ${colors.gray};
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: ${colors.white};
+        }
+      }
+    }
   }
 `;
 

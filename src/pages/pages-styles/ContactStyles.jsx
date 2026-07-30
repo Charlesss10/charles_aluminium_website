@@ -84,6 +84,7 @@ export const ContactDetailsContainer = styled.div`
      a {
      color: ${colors.gray};
      text-decoration: none;
+     transition: color 0.2s ease;
 
       &:hover {
       color: ${colors.darkGray};

@@ -71,8 +71,8 @@ function ContactPage() {
                 <p>Rivers State, Nigeria</p>
               </div>
               <div className="reachOut">
-                {/*<p><FaPhone size={20} /> (+234) 91 6349 1771 </p>*/}
-                <p><FaEnvelope size={20} /> <a href="mailto:charlesaluminium@yahoo.com"> charlesaluminium@yahoo.com</a></p>
+                <p><FaPhone size={18} /> <a href="tel:+2347039905105">(+234) 70 3990 5105</a> </p>
+                <p><FaEnvelope size={20} /> <a href="mailto:cigbojionu12@yahoo.com"> cigbojionu12@yahoo.com</a></p>
               </div>
             </div>
             <div className="branch">
@@ -83,7 +83,7 @@ function ContactPage() {
                 <p>Nigeria</p>
               </div>
               <div className="reachOut">
-                <p><FaPhone size={20} /> (+234) 90 6798 8466 </p>
+                <p><FaPhone size={18} /> <a href="tel:+2349067988466">(+234) 90 6798 8466</a> </p>
               </div>
             </div>
             <div className="branch">
@@ -94,7 +94,7 @@ function ContactPage() {
                 <p>Nigeria</p>
               </div>
               <div className="reachOut">
-                <p><FaPhone size={20} /> (+234) 80 8118 2659 </p>
+                <p><FaPhone size={18} /> <a href="tel:+2348081182659">(+234) 80 8118 2659</a> </p>
               </div>
             </div>
           </ContactDetailsContainer>
