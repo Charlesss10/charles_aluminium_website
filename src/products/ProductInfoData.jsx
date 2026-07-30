@@ -1,4 +1,4 @@
-import charlesFelt from './images/charlesFelt_2.png';
+import charlesFelt from './images/charlesFelt.png';
 import charlestech from './images/charlestech.png';
 import metcopo from './images/metcopo.png';
 import stepTile from './images/stepTile.png';
