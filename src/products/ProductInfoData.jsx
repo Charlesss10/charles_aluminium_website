@@ -60,7 +60,7 @@ const productInfoData = [
   },
   {
     id: 8,
-    name: 'Charles Roof Felt Membrane',
+    name: 'Charles Felt Membrane',
     Image: charlesFelt,
     description: `A reliable underlayment solution locally manufactured in Nigeria, 
     this felt membrane offers superior waterproofing and protection against leaks. 

@@ -18,7 +18,6 @@ export const PageHeader = styled.h2`
   max-width: ${dimensions.pageDimension};
   margin: 0 auto;
   display: table;
-  border-bottom: 2px solid ${colors.lightBlue};
   padding: 10px 10px 5px 10px;
   box-sizing: border-box;
 
