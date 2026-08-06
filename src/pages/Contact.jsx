@@ -66,7 +66,7 @@ function ContactPage() {
             <div className="branch">
               <div>
                 <h2>Port Harcourt Branch (HQ)</h2>
-                <p>Km 18, Rumuokoro, Airport Road,</p>
+                <p>Km 18 Rumuokoro - Airport Road,</p>
                 <p>Igwuruta, Port Harcourt,</p>
                 <p>Rivers State, Nigeria</p>
               </div>
@@ -75,17 +75,7 @@ function ContactPage() {
                 <p><FaEnvelope size={20} /> <a href="mailto:cigbojionu12@yahoo.com"> cigbojionu12@yahoo.com</a></p>
               </div>
             </div>
-            <div className="branch">
-              <div>
-                <h2>Orlu Branch</h2>
-                <p>Km 2, Orlu, Owerri Road,</p>
-                <p>Okporo, Imo State,</p>
-                <p>Nigeria</p>
-              </div>
-              <div className="reachOut">
-                <p><FaPhone size={18} /> <a href="tel:+2349067988466">(+234) 90 6798 8466</a> </p>
-              </div>
-            </div>
+
             <div className="branch">
               <div>
                 <h2>Uyo Branch</h2>
@@ -94,7 +84,19 @@ function ContactPage() {
                 <p>Nigeria</p>
               </div>
               <div className="reachOut">
-                <p><FaPhone size={18} /> <a href="tel:+2348081182659">(+234) 80 8118 2659</a> </p>
+                <p><FaPhone size={18} /> <a href="tel:+2348032744579">(+234) 80 3274 4579</a> </p>
+              </div>
+            </div>
+
+            <div className="branch">
+              <div>
+                <h2>Orlu Branch</h2>
+                <p>Km 2 Orlu - Owerri Road,</p>
+                <p>Okporo, Imo State,</p>
+                <p>Nigeria</p>
+              </div>
+              <div className="reachOut">
+                <p><FaPhone size={18} /> <a href="tel:+2349067988466">(+234) 90 6798 8466</a> </p>
               </div>
             </div>
           </ContactDetailsContainer>

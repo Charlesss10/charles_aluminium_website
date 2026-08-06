@@ -18,7 +18,7 @@ function Footer() {
                     <FooterBox className="contact-us">
                         <FooterTitle>Contact Us</FooterTitle>
                         <div>
-                            <p>Km 18, Rumuokoro, Airport Road, Igwuruta, PH</p>
+                            <p>Km 18 Rumuokoro - Airport Road, Igwuruta, PH</p>
                         </div>
 
                         <div className="email-contact">
@@ -35,11 +35,11 @@ function Footer() {
                             </p>
                             <p>
                                 <FaPhone size={18} />
-                                <strong>Orlu:</strong> <a href="tel:+2349067988466">(+234) 90 6798 8466</a>
+                                <strong>Uyo:</strong> <a href="tel:+2348032744579">(+234) 80 3274 4579</a>
                             </p>
                             <p>
                                 <FaPhone size={18} />
-                                <strong>Uyo:</strong> <a href="tel:+2348081182659">(+234) 80 8118 2659</a>
+                                <strong>Orlu:</strong> <a href="tel:+2349067988466">(+234) 90 6798 8466</a>
                             </p>
                         </div>
 

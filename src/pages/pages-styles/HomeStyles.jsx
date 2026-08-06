@@ -85,19 +85,36 @@ export const VisionStatement = styled.div`
 `;
 
 export const ProductsContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 60px;
-  margin-bottom: 60px;
-  text-align: justify;
-  justify-content: space-between; /* Ensures spacing between the columns */
+  /* Existing ProductsContainer styles... */
 
-   @media (max-width: 768px) {
-    gap: 10px;
-    flex-direction: column;
-    align-items: left;
+  .home-videos-wrapper {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    margin-top: 24px;
+
+    .video-card {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .video-caption {
+        margin-top: 8px;
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: #444;
+        text-align: center;
+      }
+    }
+
+    /* Stack vertically on smaller screens */
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 24px;
+    }
   }
-`
+`;
 
 export const ProductGrid = styled.div`
   flex: 1;

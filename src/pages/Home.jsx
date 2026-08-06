@@ -3,6 +3,8 @@ import ProductInfoData from '../products/ProductInfoData';
 import ServiceData from '../services/ServiceData';
 // @ts-ignore
 import feltVideo from '../assets/feltVideo.mp4';
+// @ts-ignore
+import feltVideo_2 from '../assets/feltVideo_2.mp4'; // <-- Import second video
 import feltVideoPoster from '../assets/feltVideoPoster.png';
 import {
     BackgroundContainer,
@@ -74,12 +76,28 @@ function Home() {
                             ))}
                         </ProductGrid>
 
-                        <CharlesFeltVideo>
-                            <video controls width="100%" poster={feltVideoPoster}>
-                                <source src={feltVideo} type="video/mp4" />
-                                Your browser does not support the video tag.
-                            </video>
-                        </CharlesFeltVideo>
+                        {/* SIDE-BY-SIDE VIDEOS CONTAINER */}
+                        <div className="home-videos-wrapper">
+                            <div className="video-card">
+                                <CharlesFeltVideo>
+                                    <video controls width="100%" poster={feltVideoPoster}>
+                                        <source src={feltVideo} type="video/mp4" />
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </CharlesFeltVideo>
+                                <p className="video-caption">Charlestech Bituminious felt for roofs</p>
+                            </div>
+
+                            <div className="video-card">
+                                <CharlesFeltVideo>
+                                    <video controls width="100%" poster={feltVideoPoster}>
+                                        <source src={feltVideo_2} type="video/mp4" />
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </CharlesFeltVideo>
+                                <p className="video-caption">Charlestech Bituminious felt for floors/decks/pathways</p>
+                            </div>
+                        </div>
                     </ProductsContainer>
 
                     <h2>OUR SERVICES INCLUDE:</h2>
@@ -95,6 +113,5 @@ function Home() {
             </BackgroundContainer></>
     );
 }
-
 
 export default Home;

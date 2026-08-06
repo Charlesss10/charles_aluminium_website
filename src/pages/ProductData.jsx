@@ -1,9 +1,10 @@
 import { useParams } from 'react-router-dom';
 import ProductInfoData from '../products/ProductInfoData';
 
-// Imports specific to Charles Roof Felt Membrane
+// Imports specific to Charles Felt Membrane
 // @ts-ignore
 import feltVideo from '../assets/feltVideo.mp4';
+import feltVideo_2 from '../assets/feltVideo_2.mp4';
 import feltVideoPoster from '../assets/feltVideoPoster.png';
 import feltPosterImage from '../assets/feltPoster.png';
 
@@ -43,7 +44,7 @@ const ProductData = () => {
   }
 
   const otherProducts = ProductInfoData.filter((p) => p.name !== product.name);
-  const isFeltMembrane = product.name === 'Charles Roof Felt Membrane';
+  const isFeltMembrane = product.name === 'Charles Felt Membrane';
 
   return (
     <>
@@ -53,38 +54,52 @@ const ProductData = () => {
 
       <BackgroundContainer>
         <ProductPageContainer>
-          
+
           {/* CUSTOM LAYOUT FOR FELT MEMBRANE */}
           {isFeltMembrane ? (
             <FeltCustomLayout>
-              {/* LEFT COLUMN */}
+              {/* LEFT COLUMN: DESCRIPTION & BOTH VIDEOS */}
               <div className="left-column">
                 <ProductDescription>
                   <h2>DESCRIPTION</h2>
                   <p>{product.description}</p>
                 </ProductDescription>
 
-                {/* Original Felt Image placed under description */}
-                <div className="original-image-wrapper">
-                  <ProductImage src={product.Image} alt={product.name} />
+                {/* Video 1 with Caption */}
+                <div className="video-card">
+                  <CharlesFeltVideo className="felt-video">
+                    <video controls width="100%" poster={feltVideoPoster}>
+                      <source src={feltVideo} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </CharlesFeltVideo>
+                  <p className="video-caption">Charlestech Bituminious felt for roofs</p>
                 </div>
 
-                {/* Video placed under the original image */}
-                <CharlesFeltVideo className="felt-video">
-                  <video controls width="100%" poster={feltVideoPoster}>
-                    <source src={feltVideo} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </CharlesFeltVideo>
+                {/* Video 2 with Caption (Swapped here) */}
+                <div className="video-card">
+                  <CharlesFeltVideo className="felt-video">
+                    <video controls width="100%" poster={feltVideoPoster}>
+                      <source src={feltVideo_2} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </CharlesFeltVideo>
+                  <p className="video-caption">Charlestech Bituminious felt for floors/decks/pathways</p>
+                </div>
               </div>
 
-              {/* RIGHT COLUMN (Tall Poster) */}
+              {/* RIGHT COLUMN: TALL POSTER */}
               <div className="right-column">
-                <img 
-                  src={feltPosterImage} 
-                  alt="Charles Felt Poster" 
+                <img
+                  src={feltPosterImage}
+                  alt="Charles Felt Poster"
                   className="tall-poster"
                 />
+              </div>
+
+              {/* FULL-WIDTH FELT PICTURE (Swapped to bottom) */}
+              <div className="full-width-image-container">
+                <ProductImage src={product.Image} alt={product.name} />
               </div>
             </FeltCustomLayout>
           ) : (

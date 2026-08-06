@@ -18,7 +18,6 @@ export const PageHeader = styled.h2`
   max-width: ${dimensions.pageDimension};
   margin: 0 auto;
   display: table;
-  border-bottom: 2px solid ${colors.lightBlue};
   padding: 10px 10px 5px 10px;
   box-sizing: border-box;
 
@@ -119,19 +118,21 @@ export const CharlesFeltVideo = styled.div`
 `
 export const FeltCustomLayout = styled.div`
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   width: 100%;
   margin-bottom: 40px;
 
   .left-column {
-    flex: 1;
+    flex: 1 1 calc(50% - 15px);
     display: flex;
     flex-direction: column;
     gap: 20px;
+    min-width: 280px;
   }
 
   .right-column {
-    flex: 1;
+    flex: 1 1 calc(50% - 15px);
     display: flex;
   }
 
@@ -142,20 +143,64 @@ export const FeltCustomLayout = styled.div`
     border-radius: 4px;
   }
 
-  .original-image-wrapper {
+  /* Container for individual video + caption pair */
+  .video-card {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
   }
 
   .felt-video {
     width: 100%;
+    
+    video {
+      border-radius: 4px;
+      display: block;
+    }
+  }
+
+  /* Captions styling */
+  .video-caption,
+  .image-caption {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #555;
+    margin: 4px 0 0 0;
+    text-align: center;
+  }
+
+  /* Full-width picture container at the bottom */
+  .full-width-image-container {
+    width: 100%;
+    flex: 0 0 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
   }
 
   /* Responsive stacking for mobile screens */
   @media (max-width: 768px) {
     flex-direction: column;
 
+    .left-column,
     .right-column {
-      order: 2; /* Moves poster below on mobile if preferred */
+      flex: 1 1 100%;
+    }
+
+    .right-column {
+      order: 2;
+    }
+
+    .full-width-image-container {
+      order: 3;
     }
   }
 `;
