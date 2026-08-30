@@ -34,8 +34,11 @@ export default async function handler(req, res) {
             await transporter.sendMail(mailOptions);
             return res.status(200).json({ success: true, message: 'Email sent successfully!' });
         } catch (error) {
-            console.error(error);
-            return res.status(500).json({ error: 'Error sending email' });
+            console.error("Nodemailer Error Details:", error);
+            return res.status(500).json({
+                error: 'Error sending email',
+                details: error.message || error.toString()
+            });
         }
     }
     // Handle unsupported methods
