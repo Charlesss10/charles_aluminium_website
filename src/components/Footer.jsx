@@ -85,7 +85,7 @@ function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    CharlesTech Solutions
+                    CharlesTech.AI
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="14"

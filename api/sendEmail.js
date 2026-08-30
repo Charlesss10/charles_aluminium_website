@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 
         const mailOptions = {
             from: process.env.CHARLES_ALUMINIUM_EMAIL,
-            to: process.env.CHARLES_ALUMINIUM_EMAIL,
+            to: process.env.CEO_EMAIL,
             subject: `New Contact Form Submission from ${name}`,
             text: `You have a new form submission:
 
